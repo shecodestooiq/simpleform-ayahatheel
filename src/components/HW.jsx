@@ -46,7 +46,7 @@ const HW = () => {
           />
         </label>
 
-        <button type="submit">Send</button>
+        <input type="submit"/>
       </form>
     </>
   );
