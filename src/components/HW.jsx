@@ -1,25 +1,54 @@
-import React, { useState } from 'react';
-import InputField from '../components/InputField';
-import TextAreaField from '../components/TextAreaField';
-import './HW.css'; 
+import React, { useState } from "react";
+import "../components/formsty.css";
+import TextAreaField from "../components/TextAreaField";
+import InputField from "../components/InputField";
 
 const HW = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [Username, setUserName] = useState("");
+  const [Useremail, setUserEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleMessageSubmit = (e) => {
     e.preventDefault();
-    alert({ name, email, message });
+    alert(`The info you submitted was: ${Username} ${Useremail} ${message}`);
   };
 
   return (
-    <form className="hw-form" onSubmit={handleSubmit}>
-      <InputField label="Name" value={name} onChange={(e) => setName(e.target.value)} required />
-      <InputField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      <TextAreaField label="Message" value={message} onChange={(e) => setMessage(e.target.value)} required />
-      <button type="submit">Submit</button>
-    </form>
+    <>
+      <form className="Form-cont" onSubmit={handleMessageSubmit}>
+        <label id="message">
+          Name:
+          <InputField
+            className="NameInput"
+            value={Username}
+            onChange={(e) => setUserName(e.target.value)}
+            required
+          />
+        </label>
+
+        <label id="message">
+          Email:
+          <InputField
+            className="EmailInput"
+            value={Useremail}
+            onChange={(e) => setUserEmail(e.target.value)}
+            required
+          />
+        </label>
+
+        <label id="message">
+          Message:
+          <TextAreaField
+            className="TextAreaF"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          />
+        </label>
+
+        <button type="submit">Send</button>
+      </form>
+    </>
   );
 };
 

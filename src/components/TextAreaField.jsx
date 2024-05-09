@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TextAreaField = ({ label, value, onChange, required }) => (
+const TextAreaField = ({ label, value, onChange }) => (
   <div>
     <label>{label}</label>
-    <textarea value={value} onChange={onChange} required={required} />
+    <textarea value={value} onChange={onChange} />
   </div>
 );
 

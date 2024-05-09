@@ -1,0 +1,45 @@
+.Form-cont{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Form-cont label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .Form-cont textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .Form-cont input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    .Form-cont button {
+    background-color: rgb(202, 86, 86);
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .Form-cont button:hover {
+    background-color: rgb(132, 29, 29);
+  }
+  
