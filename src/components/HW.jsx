@@ -8,15 +8,15 @@ const HW = () => {
   const [Useremail, setUserEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleMessageSubmit = (e) => {
+  const handleFormaSubmit = (e) => {
     e.preventDefault();
     alert(`The info you submitted was: ${Username} ${Useremail} ${message}`);
   };
 
   return (
     <>
-      <form className="Form-cont" onSubmit={handleMessageSubmit}>
-        <label id="message">
+      <form className="Form-cont" onSubmit={handleFormaSubmit}>
+        <label>
           Name:
           <InputField
             className="NameInput"
@@ -26,7 +26,7 @@ const HW = () => {
           />
         </label>
 
-        <label id="message">
+        <label>
           Email:
           <InputField
             className="EmailInput"
@@ -36,7 +36,7 @@ const HW = () => {
           />
         </label>
 
-        <label id="message">
+        <label>
           Message:
           <TextAreaField
             className="TextAreaF"
