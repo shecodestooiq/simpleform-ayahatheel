@@ -14,7 +14,7 @@ const HW = () => {
   };
 
   return (
-    <>
+    <> 
       <form className="Form-cont" onSubmit={handleFormaSubmit}>
         <label>
           Name:
